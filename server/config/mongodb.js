@@ -6,7 +6,7 @@ const connectDB = async () => {
       console.log("MongoDB connected");
     });
 
-    await mongoose.connect(`${process.env.MONGODB_URL}/mern-auth`);
+    await mongoose.connect(`${process.env.MONGODB_URL}`);
   } catch (error) {
     mongoose.connection.on("error", () => {
       console.log("MongoDB connection failed");
